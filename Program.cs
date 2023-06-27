@@ -1,11 +1,11 @@
 ﻿using System;
-//using System.Collections.Generic;
+using System.Collections.Generic;
 //using System.Linq;
 //using System.Text;
 //using System.Threading.Tasks;
 
 
-namespace T2_E3
+namespace T2_E4
 {
     class Alumno
     {
@@ -19,17 +19,15 @@ namespace T2_E3
         private string nombre;
         private string hora;
         private string catedratico;
-        private Alumno[] alumnos;
-        private int totalAlumnos;
+        private List<Alumno> alumnos;
 
         public Asignatura(string codigo, string nombre, string hora, string catedratico)
         {
             this.codigo = codigo;
             this.nombre = nombre;
             this.hora = hora;
-            this.alumnos = new Alumno[30]; // Suponemos un máximo de 30 alumnos
-            this.totalAlumnos = 0;
             this.catedratico = catedratico;
+            this.alumnos = new List<Alumno>();
         }
 
         public void AgregarAlumno()
@@ -46,8 +44,7 @@ namespace T2_E3
                 Nombre = nombreAlumno
             };
 
-            alumnos[totalAlumnos] = alumno;
-            totalAlumnos++;
+            alumnos.Add(alumno);
 
             Console.WriteLine("Alumno agregado correctamente.");
         }
@@ -55,10 +52,10 @@ namespace T2_E3
         public void MostrarAlumnos()
         {
             Console.WriteLine("Alumnos agregados:");
-            for (int i = 0; i < totalAlumnos; i++)
+            foreach (Alumno alumno in alumnos)
             {
-                Console.WriteLine("Número de cuenta: " + alumnos[i].NumeroCuenta);
-                Console.WriteLine("Nombre: " + alumnos[i].Nombre);
+                Console.WriteLine("Número de cuenta: " + alumno.NumeroCuenta);
+                Console.WriteLine("Nombre: " + alumno.Nombre);
                 Console.WriteLine();
             }
         }
@@ -68,8 +65,8 @@ namespace T2_E3
             Console.WriteLine("Detalles de la asignatura:");
             Console.WriteLine("Código: " + codigo);
             Console.WriteLine("Nombre: " + nombre);
-            Console.WriteLine("Catedratico que la imparte: " + catedratico);
             Console.WriteLine("Hora de impartición: " + hora);
+            Console.WriteLine("Catedratico: " + catedratico);   
             Console.WriteLine();
         }
     }
@@ -78,7 +75,7 @@ namespace T2_E3
     {
         static void Main(string[] args)
         {
-            Asignatura asignatura = new Asignatura("IS410", "Programación Orientada a Objetos", "09:00", "Ing. Julio Sandoval");
+            Asignatura asignatura = new Asignatura("IS410", "Programación Orientada a Objetos", "09:00", " Ing. Julio Sandoval");
 
             bool salir = false;
             while (!salir)
