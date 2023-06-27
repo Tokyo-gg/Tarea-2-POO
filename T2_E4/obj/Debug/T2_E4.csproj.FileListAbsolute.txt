@@ -1,0 +1,8 @@
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\bin\Debug\T2_E4.exe.config
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\bin\Debug\T2_E4.exe
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\bin\Debug\T2_E4.pdb
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\obj\Debug\T2_E4.csproj.AssemblyReference.cache
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\obj\Debug\T2_E4.csproj.SuggestedBindingRedirects.cache
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\obj\Debug\T2_E4.csproj.CoreCompileInputs.cache
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\obj\Debug\T2_E4.exe
+C:\Users\usuario\Documents\UNAH\POO\T2_E4\obj\Debug\T2_E4.pdb
