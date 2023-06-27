@@ -1,113 +1,43 @@
 ﻿using System;
 using System.Collections.Generic;
-//using System.Linq;
-//using System.Text;
-//using System.Threading.Tasks;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
-
-namespace T2_E4
+namespace T2_E1
 {
-    class Alumno
+    internal class Program
     {
-        public string NumeroCuenta { get; set; }
-        public string Nombre { get; set; }
-    }
-
-    class Asignatura
-    {
-        private string codigo;
-        private string nombre;
-        private string hora;
-        private string catedratico;
-        private List<Alumno> alumnos;
-
-        public Asignatura(string codigo, string nombre, string hora, string catedratico)
-        {
-            this.codigo = codigo;
-            this.nombre = nombre;
-            this.hora = hora;
-            this.catedratico = catedratico;
-            this.alumnos = new List<Alumno>();
-        }
-
-        public void AgregarAlumno()
-        {
-            Console.WriteLine("Ingrese los datos del alumno:");
-            Console.Write("Número de cuenta: ");
-            string numeroCuenta = Console.ReadLine();
-            Console.Write("Nombre: ");
-            string nombreAlumno = Console.ReadLine();
-
-            Alumno alumno = new Alumno
-            {
-                NumeroCuenta = numeroCuenta,
-                Nombre = nombreAlumno
-            };
-
-            alumnos.Add(alumno);
-
-            Console.WriteLine("Alumno agregado correctamente.");
-        }
-
-        public void MostrarAlumnos()
-        {
-            Console.WriteLine("Alumnos agregados:");
-            foreach (Alumno alumno in alumnos)
-            {
-                Console.WriteLine("Número de cuenta: " + alumno.NumeroCuenta);
-                Console.WriteLine("Nombre: " + alumno.Nombre);
-                Console.WriteLine();
-            }
-        }
-
-        public void ImprimirDetallesAsignatura()
-        {
-            Console.WriteLine("Detalles de la asignatura:");
-            Console.WriteLine("Código: " + codigo);
-            Console.WriteLine("Nombre: " + nombre);
-            Console.WriteLine("Hora de impartición: " + hora);
-            Console.WriteLine("Catedratico: " + catedratico);   
-            Console.WriteLine();
-        }
-    }
-
-    class Program
-    {
+        
         static void Main(string[] args)
         {
-            Asignatura asignatura = new Asignatura("IS410", "Programación Orientada a Objetos", "09:00", " Ing. Julio Sandoval");
+            
+            Console.WriteLine("Ingrese tres números enteros:");
 
-            bool salir = false;
-            while (!salir)
+            // Leer las tres entradas desde la consola
+            Console.Write("Primer número: ");
+            string input1 = Console.ReadLine();
+
+            Console.Write("Segundo número: ");
+            string input2 = Console.ReadLine();
+
+            Console.Write("Tercer número: ");
+            string input3 = Console.ReadLine();
+
+            // Convertir las cadenas de texto en números enteros utilizando int.Parse()
+            try
             {
-                Console.WriteLine("Menú:");
-                Console.WriteLine("1. Agregar alumno.");
-                Console.WriteLine("2. Mostrar alumnos agregados.");
-                Console.WriteLine("3. Salir");
-                Console.Write("Seleccione una opción: ");
-                string opcion = Console.ReadLine();
-
-                switch (opcion)
-                {
-                    case "1":
-                        asignatura.AgregarAlumno();
-                        break;
-                    case "2":
-                        asignatura.ImprimirDetallesAsignatura();
-                        asignatura.MostrarAlumnos();
-                        break;
-                    case "3":
-                        salir = true;
-                        break;
-                    default:
-                        Console.WriteLine("Opción inválida. Intente nuevamente.");
-                        break;
-                }
-
-                Console.WriteLine();
+                int num1 = int.Parse(input1);
+                int num2 = int.Parse(input2);
+                int num3 = int.Parse(input3);           
+            }
+            catch (FormatException)
+            {
+                Console.WriteLine("Uno o más valores ingresados no son números enteros válidos.");
             }
 
-            Console.WriteLine("¡Hasta luego!");
+            Console.WriteLine("Los 3 numeros son: " + num1 + num2 + num3);
+            Console.WriteLine()
         }
     }
 }
