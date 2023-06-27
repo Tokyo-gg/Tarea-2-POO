@@ -1,58 +1,116 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+//using System.Collections.Generic;
+//using System.Linq;
+//using System.Text;
+//using System.Threading.Tasks;
 
-namespace Tarea2eje1
+
+namespace T2_E3
 {
-    internal class Program
+    class Alumno
+    {
+        public string NumeroCuenta { get; set; }
+        public string Nombre { get; set; }
+    }
+
+    class Asignatura
+    {
+        private string codigo;
+        private string nombre;
+        private string hora;
+        private string catedratico;
+        private Alumno[] alumnos;
+        private int totalAlumnos;
+
+        public Asignatura(string codigo, string nombre, string hora, string catedratico)
+        {
+            this.codigo = codigo;
+            this.nombre = nombre;
+            this.hora = hora;
+            this.alumnos = new Alumno[30]; // Suponemos un máximo de 30 alumnos
+            this.totalAlumnos = 0;
+            this.catedratico = catedratico;
+        }
+
+        public void AgregarAlumno()
+        {
+            Console.WriteLine("Ingrese los datos del alumno:");
+            Console.Write("Número de cuenta: ");
+            string numeroCuenta = Console.ReadLine();
+            Console.Write("Nombre: ");
+            string nombreAlumno = Console.ReadLine();
+
+            Alumno alumno = new Alumno
+            {
+                NumeroCuenta = numeroCuenta,
+                Nombre = nombreAlumno
+            };
+
+            alumnos[totalAlumnos] = alumno;
+            totalAlumnos++;
+
+            Console.WriteLine("Alumno agregado correctamente.");
+        }
+
+        public void MostrarAlumnos()
+        {
+            Console.WriteLine("Alumnos agregados:");
+            for (int i = 0; i < totalAlumnos; i++)
+            {
+                Console.WriteLine("Número de cuenta: " + alumnos[i].NumeroCuenta);
+                Console.WriteLine("Nombre: " + alumnos[i].Nombre);
+                Console.WriteLine();
+            }
+        }
+
+        public void ImprimirDetallesAsignatura()
+        {
+            Console.WriteLine("Detalles de la asignatura:");
+            Console.WriteLine("Código: " + codigo);
+            Console.WriteLine("Nombre: " + nombre);
+            Console.WriteLine("Catedratico que la imparte: " + catedratico);
+            Console.WriteLine("Hora de impartición: " + hora);
+            Console.WriteLine();
+        }
+    }
+
+    class Program
     {
         static void Main(string[] args)
         {
-            int n1, n2, n3,suma,producto;
+            Asignatura asignatura = new Asignatura("IS410", "Programación Orientada a Objetos", "09:00", "Ing. Julio Sandoval");
 
-            Console.WriteLine("Ingrese un Entero:");
-            n1 = int.Parse(Console.ReadLine());
+            bool salir = false;
+            while (!salir)
+            {
+                Console.WriteLine("Menú:");
+                Console.WriteLine("1. Agregar alumno.");
+                Console.WriteLine("2. Mostrar alumnos agregados.");
+                Console.WriteLine("3. Salir");
+                Console.Write("Seleccione una opción: ");
+                string opcion = Console.ReadLine();
 
-            Console.WriteLine("Ingrese un Entero:");
-            n2 = int.Parse(Console.ReadLine());
+                switch (opcion)
+                {
+                    case "1":
+                        asignatura.AgregarAlumno();
+                        break;
+                    case "2":
+                        asignatura.ImprimirDetallesAsignatura();
+                        asignatura.MostrarAlumnos();
+                        break;
+                    case "3":
+                        salir = true;
+                        break;
+                    default:
+                        Console.WriteLine("Opción inválida. Intente nuevamente.");
+                        break;
+                }
 
-            Console.WriteLine("Ingrese un Entero:");
-            n3 = int.Parse(Console.ReadLine()); 
+                Console.WriteLine();
+            }
 
-            //suma de los tres enteros
-            suma=n1+n2+n3;
-            Console.WriteLine("la Suma es:" +suma);
-
-            //promedio de los tres enteros
-            double promedio = Convert.ToDouble(suma)/3;
-            promedio = Math.Round(promedio, 2);
-            Console.WriteLine("El Promedio es:" + promedio);
-
-            //producto de los tres enteros
-            producto = n1 * n2 * n3;
-            Console.WriteLine("El Producto es: " + producto);
-
-            //numero mayor y menor de los tres enteros
-            int mayor, menor;
-           
-            mayor = n1;
-            if(mayor<n2) mayor = n2;
-            if(mayor<n3) mayor = n3;
-            
-            menor = n1;
-            if (menor > n2) menor = n2;
-            if (menor > n3 ) menor = n3;
-
-            Console.WriteLine("El menor de los tres enteros es: " + menor);
-            Console.WriteLine("El mayor de los tres enteros es: " + mayor);
-
-            Console.ReadLine();
+            Console.WriteLine("¡Hasta luego!");
         }
-
     }
-
-
-
 }
