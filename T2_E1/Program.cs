@@ -4,40 +4,75 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace T2_E1
 {
-    internal class Program
+    /*Clase que recibe tres enteros e imprime la suma, el promedio, el producto, mayor y menor */
+    class Program
     {
-        
         static void Main(string[] args)
         {
-            
             Console.WriteLine("Ingrese tres números enteros:");
 
-            // Leer las tres entradas desde la consola
-            Console.Write("Primer número: ");
-            string input1 = Console.ReadLine();
+            int num1 = int.Parse(Console.ReadLine()); // int.Parse() convierte las cadenas de texto en números enteros 
+            int num2 = int.Parse(Console.ReadLine());
+            int num3 = int.Parse(Console.ReadLine());
 
-            Console.Write("Segundo número: ");
-            string input2 = Console.ReadLine();
+            Console.WriteLine();
 
-            Console.Write("Tercer número: ");
-            string input3 = Console.ReadLine();
+            Calculadora calculadora = new Calculadora(num1, num2, num3);
 
-            // Convertir las cadenas de texto en números enteros utilizando int.Parse()
-            try
-            {
-                int num1 = int.Parse(input1);
-                int num2 = int.Parse(input2);
-                int num3 = int.Parse(input3);           
-            }
-            catch (FormatException)
-            {
-                Console.WriteLine("Uno o más valores ingresados no son números enteros válidos.");
-            }
+            Console.WriteLine("Suma: " + calculadora.ObtenerSuma());
+            Console.WriteLine("Promedio: " + calculadora.ObtenerPromedio());
+            Console.WriteLine("Producto: " + calculadora.ObtenerProducto());
+            Console.WriteLine("Mayor: " + calculadora.ObtenerMayor());
+            Console.WriteLine("Menor: " + calculadora.ObtenerMenor());
 
-            Console.WriteLine("Los 3 numeros son: " + num1 + num2 + num3);
-            Console.WriteLine()
+        }
+
+    }
+
+    /*Clase que realiza los calculos*/
+    class Calculadora
+    {
+        private int num1;
+        private int num2;
+        private int num3;
+
+        public Calculadora(int num1, int num2, int num3) //metodo constructor de la clase
+        {
+            this.num1 = num1;
+            this.num2 = num2;
+            this.num3 = num3;
+        }
+
+        public int ObtenerSuma()
+        {
+            return num1 + num2 + num3;
+        }
+
+        public String ObtenerPromedio()
+        {
+            double promedio = ObtenerSuma() / 3.00;
+            return promedio.ToString("0.##"); //metodo que convierte cualquier tipo en string y muestra solo dos valores después del punto
+
+        }
+
+        public int ObtenerProducto()
+        {
+            return num1 * num2 * num3;
+        }
+
+        public int ObtenerMayor()
+        {
+            int mayor = Math.Max(num1, Math.Max(num2, num3));
+            return mayor;
+        }
+
+        public int ObtenerMenor()
+        {
+            int menor = Math.Min(num1, Math.Min(num2, num3));
+            return menor;
         }
     }
 }
