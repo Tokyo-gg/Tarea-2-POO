@@ -1,0 +1,22 @@
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.AssemblyReference.cache
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.SuggestedBindingRedirects.cache
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio_7.Properties.Resources.resources
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.GenerateResource.cache
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.exe.config
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.exe
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.pdb
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.exe
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.pdb
+C:\Users\USUARIO\source\repos\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio_7.FRMPrincipal.resources
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.exe.config
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.exe
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\bin\Debug\Ejercicio#7.pdb
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.AssemblyReference.cache
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.SuggestedBindingRedirects.cache
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio_7.FRMPrincipal.resources
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio_7.Properties.Resources.resources
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.GenerateResource.cache
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.csproj.CoreCompileInputs.cache
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.exe
+C:\Users\gerar\OneDrive\Desktop\Uni\Programación Orientada a Objetos\Tarea 2 POO\Ejercicio#7\Ejercicio#7\obj\Debug\Ejercicio#7.pdb
